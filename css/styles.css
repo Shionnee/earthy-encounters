@@ -1,0 +1,200 @@
+
+body{
+    background-color:#FAF0ED;
+    font-family: 'PT Serif', serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #BE9D7F;
+}
+.heading{
+    margin: auto;
+    max-width: 1000px;
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+}
+
+#content-box{
+    display:block;
+    position: relative;
+    background-color: white;
+    width: 750px;
+    justify-content: center;
+    align-items: center;  
+    margin: 60px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+.intro{ 
+    max-width: 1000px;
+    margin: 60px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.brand{
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #5A5C48;
+    margin-top: 20px;
+}
+
+h2{
+    
+    font-family: 'PT Serif', cursive;
+    font-size: 2rem;
+    color: #94A684;
+}
+.navbar-nav{
+    font-family: 'PT Serif', serif;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+}
+.nav-item{
+    margin-right: 20px;
+}
+.nav-link{
+    color: rgb(58, 56, 56);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+/*give it an active color when clicked*/
+.navbar-nav .active{
+    color: #da9fb4f8 !important;
+    font-size: 1rem;
+}
+/* image row*/
+/* .portfolio-container{
+    padding: 20px;
+    margin: 0 auto;  
+} */
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.column{
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+.column img{
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+.nav-item a:hover{
+    color: #da9fb4f8;
+}
+hr{
+    border-top: 1px solid #94A684;
+    max-width: 1000px;
+    margin: 60px auto;
+    padding:0 25px;
+}
+
+/* #portfolioCarousel{ 
+    max-width: 1000px;
+    padding: 20px;
+    margin: 60px auto;
+    display: block;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+       
+} */
+/* .carousel-item img{
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+} */
+.home-img{
+    width: 100%;
+
+    border-radius: 12px;
+}
+input,textarea,button{
+    margin: 4px 0;
+    padding: 8px;
+}
+.flex-wrapper{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contact-form{
+    max-width: 500px;
+    margin: auto;
+    padding: 25px;
+}
+#contactForm{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px 0;
+   justify-content: space-evenly;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+label{
+    font-size: 1.25rem;
+    color: #BE9D7F;
+}
+::placeholder{
+    color: rgb(206, 206, 206) !important;
+
+}
+footer{
+    margin-top: auto;
+    padding: 0 20px 10px 0;
+    color: rgb(206, 206, 206);
+}
+.btn-primary{
+    margin-top: 25px;
+    background-color: #EFD8C9;
+    color:#BE9D7F ;
+    border: none;
+}
+.btn-primary:hover{
+    background-color: #BE9D7F;
+    color:white;
+}
+.btn-primary:active{
+    background-color: #EFD8C9;
+    color:#BE9D7F ;
+    
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
