@@ -1,81 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Dancing+Script:wght@400;700&family=Montserrat:ital,wght@0,400;1,300&family=PT+Serif&family=Pinyon+Script&display=swap');
+
 
 body{
-    background-color:#FAF0ED;
-    font-family: 'PT Serif', serif;
+    background-color:white;
+    font-family: 'Monserrat', sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
+    
 }
 
 a{
     text-decoration: none;
-    color: #BE9D7F;
+    color: #4a5759;
 }
+.heading-image{
+    background: linear-gradient(to right,rgba(255, 255, 255, 1), rgba(250, 240, 237, 0)), url(/images/whitepinkflower.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    max-width: 100%;  
+}
+
 .heading{
-    margin: auto;
-    max-width: 1000px;
-    /* padding: 20px; */
     display: flex;
-    flex-direction: row;
-    align-items:center;
-    justify-content: space-between;
-    width: 100%;
-    text-align: center;
+    justify-content: flex-start;
+    align-items:center; 
+    height: 100vh;
+}
+
+.brandContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;    
+    align-items: center;
+    margin-left: 90px;
+
+}
+#about{
+    background-color: white;
+    margin:25px 0 25px 0;
 }
 
 #content-box{
-    display:block;
-    position: relative;
-    background-color: white;
-    width: 750px;
-    justify-content: center;
+    display: flex;
+    background-color: #edafb8;
+    justify-content: space-evenly;
     align-items: center;  
-    margin: 60px auto;
+    margin: auto;
     padding: 20px;
     border-radius: 10px;
+
+
 }
-.intro{ 
-    max-width: 1000px;
-    margin: 60px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 20px;
+.about-img-container{
+    display: block;
+    flex-shrink:0;
+    width: 300px;
+    height: auto;
+    
+}
+.intro{  
+    margin: auto 25px;
+
+    
+    
 }
 .brand{
+    font-family: 'Cormorant Garamond';
     text-align: center;
-    font-family: 'Dancing Script', cursive;
-    font-size: 3rem;
-    color: #5A5C48;
-    margin-top: 20px;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 4rem;
+    color: #4a5759;
+
 }
 
 h2{
-    
-    font-family: 'PT Serif', cursive;
-    font-size: 2rem;
-    color: #94A684;
+    font-family: 'Cormorant Garamond';
+    font-weight: 500;
+    font-size: 3rem;
+    color: #4a5759;
+}
+h3{
+    font-family: 'Pinyon Script', cursive;
 }
 .navbar-nav{
-    font-family: 'PT Serif', serif;
     list-style-type: none;
-    margin: 0;
+    margin: auto;
     overflow: hidden;
+    
+}
+#navContainer{
+    background-color:white;
+    width: 100%;
+    font-family: 'Cormorant Garamond';
+    font-weight: 400;
+    font-size: 1.4rem;
+    
+    
 }
 .nav-item{
-    margin-right: 20px;
+    margin:0 60px;
+    padding:0;
 }
-.nav-link{
-    color: rgb(58, 56, 56);
+.nav-link{  
+    color: #4a5759;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 /*give it an active color when clicked*/
-.navbar-nav .active{
-    color: #da9fb4f8 !important;
-    font-size: 1rem;
+.navbar-nav .nav-link.active{
+    background-color: #b0c4b1;
+    color: white !important;
+    
 }
 /* image row*/
 /* .portfolio-container{
@@ -99,7 +139,9 @@ h2{
     width: 100%;
 }
 .nav-item a:hover{
-    color: #da9fb4f8;
+    background-color: #b0c4b1;
+    color: white !important;
+    
 }
 hr{
     border-top: 1px solid #94A684;
@@ -107,30 +149,77 @@ hr{
     margin: 60px auto;
     padding:0 25px;
 }
-
-/* #portfolioCarousel{ 
-    max-width: 1000px;
-    padding: 20px;
-    margin: 60px auto;
-    display: block;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-       
-} */
-/* .carousel-item img{
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-} */
-.social a{
-    margin:8px;
-    
+/* navbar togglers */
+.navbar-toggler {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
 }
-.home-img{
-    width: 100%;
 
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #333; /* Adjust the color as needed */
+    border-radius: 1px;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+}
+.bar1,
+.bar2,
+.bar3 {
+    outline: none; /* Remove outline on click */
+}
+.bar1 {
+    top: 0;
+}
+
+.bar2 {
+    top: 8px;
+}
+
+.bar3 {
+    top: 16px;
+}
+
+/* Styles for the close icon when the navbar is open */
+.navbar-toggler[aria-expanded="true"] .bar1 {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggler[aria-expanded="true"] .bar2 {
+    opacity: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .bar3 {
+    transform: rotate(-45deg) translate(3px, -5px);
+}
+
+
+
+
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:50px 0;
+}
+.social a{
+    margin:8px;  
+}
+.about-img{
+    width: 100%;
     border-radius: 12px;
+    
 }
 input,textarea,button{
     margin: 4px 0;
@@ -178,31 +267,57 @@ footer{
 }
 .btn-primary{
     margin-top: 25px;
-    background-color: #EFD8C9;
-    color:#BE9D7F ;
+    background-color: #b0c4b1;
+    color:white ;
     border: none;
 }
 .btn-primary:hover{
-    background-color: #BE9D7F;
+    background-color: #4a5759;
     color:white;
 }
 .btn-primary:active{
-    background-color: #EFD8C9;
-    color:#BE9D7F ;
+    background-color: #4a5759 !important;
+    color:white !important;
     
 }
-/* Responsive layout - makes a two column-layout instead of four columns */
+/* Responsive layout - makes a two-column layout instead of four columns */
+@media screen and (max-width: 1200px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+    #content-box {
+        flex-direction: column;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
     .column {
-      flex: 50%;
-      max-width: 50%;
+        flex: 100%;
+        max-width: 100%;
     }
-  }
-  
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .column {
-      flex: 100%;
-      max-width: 100%;
+    #content-box {
+        flex-direction: column;
     }
-  }
+}
+
+/* Further adjustments for smaller screens if needed */
+@media screen and (max-width: 600px) {
+    .brandContainer {
+        margin-left: 10px; /* Adjusted margin for smaller screens */
+    }
+
+    .navbar {
+        background-color: white; /* Adjusted background color for smaller screens */
+    }
+
+    .heading {
+        flex-direction: column;
+        height: auto;
+    }
+
+   /*  .heading-image {
+        height: auto;
+    } */
+}
